@@ -4,6 +4,11 @@ import Hamster from '/ham.png'
 import HourModal from './hourModal'
 import TabModal from './tabModal'
 import vector from '/Vector.svg'
+import binance from '/Union.svg'
+import airdrop from '/airdrop.svg'
+import { FaUserFriends } from "react-icons/fa";
+import { FaCoins } from "react-icons/fa6";
+import { GiGoldBar } from "react-icons/gi";
 const homePage = () => {
     const [counter, setCounter] = useState(2999)
 
@@ -46,9 +51,9 @@ const homePage = () => {
             </div>
             </div>
 
-            <div>
-                <h1 className='flex text-white font-bold text-center mt-[70px] text-[40px] ml-[150px]'><img className="w-[50px] h-[50px]"  src={Coin} alt="coin" />{counter}</h1>
-                <button onClick={() => setCounter(counter + 1)} className='w-[372px] h-[372px] rounded-[50%] bg-[#35389E] border-[#1C2848] border-[10px] ml-[60px] mt-[100px]'><img className='ml-[90px]' src={Hamster} alt="hamster" /></button>
+            <div className='justify-center'>
+                <h1 className='flex text-white font-bold text-center mt-[70px] text-[40px] justify-center'><img className="w-[50px] h-[50px]"  src={Coin} alt="coin" />{counter}</h1>
+                <button onClick={() => setCounter(counter + 1)} className=' w-[372px] h-[372px] rounded-[50%] ml-[60px] bg-[#35389E] border-[#1C2848] border-[10px] mt-[100px] items-center'><img className='ml-[90px]' src={Hamster} alt="hamster" /></button>
             </div>
 
 
@@ -56,6 +61,33 @@ const homePage = () => {
             <div className='flex justify-between mt-[50px]'>
                 <div className='font-bold text-white flex gap-2'><img src={vector} alt="vector" />6500/6500</div>
                 <div className='font-bold text-white'>Boost</div>
+            </div>
+
+
+
+
+
+            <div className='flex gap-[50px] justify-center mt-[50px] bg-gray-900 h-[70px] rounded-2xl'>
+                <div className='mt-[10px]'>
+                    <img className='' src={binance} alt="" />
+                    <h2 className='text-white text-bold text-center'>Exchange</h2>
+                </div>
+                <div className='mt-[10px]'>
+                    <GiGoldBar color='grey' size={29}/>
+                    <h2 className='text-white text-bold text-center'>Mine</h2>
+                </div>
+                <div className='mt-[10px]'>
+                    <FaUserFriends color='grey' size={29} />
+                    <h2 className='text-white text-bold text-center'>Freinds</h2>
+                </div>
+                <div className='mt-[10px]'>
+                    <FaCoins color='grey' size={30} />
+                    <h2 className='text-white text-bold text-center'>Earn</h2>
+                </div>
+                <div className='mt-[10px]'>
+                    <img src={airdrop} alt="" />
+                    <h2 className='text-white text-bold text-center'>AirDrop</h2>
+                </div>
             </div>
             {hourModal && <HourModal closeHourModal={closeHourModal}/>}
             {tabModal && <TabModal closeTabModal={closeTabModal}/>}
